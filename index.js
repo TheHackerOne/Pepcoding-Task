@@ -75,6 +75,10 @@ function extractFirstThreeHeadings(arr){
 
 // Extracts Information related to each Heading from the Webpage
 function extractInformationFromHeading($, heading, wholePage, headingRange, html){
+    if(heading.includes('Confusion')){
+        heading = heading.split(" ")
+        heading = heading.slice(0, 3).join(" ")
+    }
     displayHeading(heading)
     let paras = $(wholePage).find('p')
     let ui = $(wholePage).find('ul')
