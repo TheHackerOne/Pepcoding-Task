@@ -57,9 +57,7 @@ function callBackForRequest(err, request, html){
 
 // Displays the Heading using CHALK and FIGLET modules
 function displayHeading(heading){
-    console.log(chalk.rgb(90, 255, 8).bold(figlet.textSync(`${heading}`, {
-        width: 80
-    })))
+    console.log(chalk.rgb(90, 255, 8).bold(figlet.textSync(`${heading}`)))
 }
 
 // Scrape first 3 headings(their subheadings too) from the webPage
